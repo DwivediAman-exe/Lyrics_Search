@@ -5,12 +5,20 @@ const more = document.getElementById("more");
 
 const apiURL = "https://api.lyrics.ovh";
 
+// show data
+
+function showData(data) {
+    
+}
+
 // Seacrh function
 
-function searchSongs(term) {
-    fetch(`${apiURL}/suggest/${term}`)
-    .then(res => res.json())
-    .then(data => console.log(data));
+async function searchSongs(term) {
+    const res = await fetch(`${apiURL}/suggest/${term}`);
+    const data = await res.json();
+    console.log(data);
+
+    showData(data);
 }
 
 // Event Listner
