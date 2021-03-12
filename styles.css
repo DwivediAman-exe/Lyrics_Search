@@ -68,7 +68,7 @@ form input {
 }
 
 form button {
-    background-color: rgb(207, 119, 134);
+    background-color: rgba(231, 51, 81, 0.883);
     border: 0;
     border-radius: 50px;
     color: #fff;
