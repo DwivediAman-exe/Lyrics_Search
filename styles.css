@@ -10,6 +10,10 @@ body {
     background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
 }
 
+.top{
+    color: rgb(240, 102, 125);
+}
+
 button {
     cursor: pointer;
 }
@@ -150,3 +154,13 @@ ul.songs li {
     color: rgb(0, 0, 0);;
     padding: 4px 10px;
 }
+
+/* .contact {
+    position: absolute;
+    top: 40px;
+    color: #fff;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+ */
