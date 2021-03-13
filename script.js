@@ -16,15 +16,16 @@ async function searchSongs(term) {
 // Show song and artist in DOM
 function showData(data) {
   result.innerHTML = `
+    <strong class="searchresult">Search Results</strong>
     <ul class="songs">
       ${data.data
         .map(
-          song => `<li>
-      <span><strong>${song.artist.name}</strong> - ${song.title}</span>
+          (song,index) => `<li>
+      <span><strong>${index+1}. ${song.artist.name}</strong> - ${song.title}</span>
       <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
     </li>`
-        )
-        .join('')}
+      )
+      .join('')}
     </ul>
   `;
 
@@ -61,8 +62,8 @@ async function getLyrics(artist, songTitle) {
 
   const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
 
-  result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle}</h2>
-  <span>${lyrics}</span>`;
+  result.innerHTML = `<h2 class="searchresult"><strong >${artist}</strong> - ${songTitle}</h2>
+  <span class="lyrics">${lyrics}</span>`;
 
   more.innerHTML = '';
 }
