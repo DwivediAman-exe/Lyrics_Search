@@ -5,6 +5,9 @@ const more = document.getElementById('more');
 
 const apiURL = 'https://api.lyrics.ovh';
 
+const date = new Date();
+const year = date.getFullYear;
+
 // Search by song or artist
 async function searchSongs(term) {
   const res = await fetch(`${apiURL}/suggest/${term}`);
